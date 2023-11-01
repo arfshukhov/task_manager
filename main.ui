@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TaskManager</class>
+ <widget class="QMainWindow" name="TaskManager">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1086</width>
+    <height>599</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Task Manager</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>1061</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QListWidget" name="monday_list"/>
+     </item>
+     <item>
+      <widget class="QListWidget" name="tuesday_list"/>
+     </item>
+     <item>
+      <widget class="QListWidget" name="wednesday_list"/>
+     </item>
+     <item>
+      <widget class="QListWidget" name="thursday_list"/>
+     </item>
+     <item>
+      <widget class="QListWidget" name="friday_list"/>
+     </item>
+     <item>
+      <widget class="QListWidget" name="saturday_list"/>
+     </item>
+     <item>
+      <widget class="QListWidget" name="sunday_list"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>49</y>
+      <width>1061</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="monday_label">
+       <property name="text">
+        <string>MONDAY</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="tuesday_label">
+       <property name="text">
+        <string>TUESDAY</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="wednesday_label">
+       <property name="text">
+        <string>WEDNESDAY</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="thursday_label">
+       <property name="text">
+        <string>THURSDAY</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="friday_label">
+       <property name="text">
+        <string>FRIDAY</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="saturday_label">
+       <property name="text">
+        <string>SATURDAY</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="sunday_label">
+       <property name="text">
+        <string>SUNDAY</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ADD TASK</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1086</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
