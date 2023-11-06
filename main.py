@@ -33,6 +33,8 @@ class AddTaskWidget(Ui_AddTaskWidget):
 
 
 
+
+
 if __name__ == "__main__":
    # print(datetime.datetime.strptime(str(datetime.datetime.now()), "%Y/%m/%d"))
     app = QApplication(sys.argv)

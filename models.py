@@ -14,3 +14,12 @@ class Task(Model):
     class Meta:
         database = db
         db_table = "Task"
+
+
+class TaskStatus(Model):
+    uid = TextField(null=False)
+    status = TextField(null=False)
+
+    class Meta:
+        database = db
+        db_table = "TaskStatus"
