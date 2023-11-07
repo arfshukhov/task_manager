@@ -1,4 +1,4 @@
-from typing import Union
+from data_types import *
 
 from models import *
 import hashlib as hl
@@ -67,7 +67,7 @@ class DBWriter:
             raise NotOriginalTask((text, time, date))
 
     @classmethod
-    def make_failed(cls, uid)->Union[bool, str]:
+    def make_failed(cls, uid) -> DBOperationResult:
         query = (TaskStatus
                  .update({TaskStatus.status: "failed"})
                  .where(TaskStatus.uid==uid))
