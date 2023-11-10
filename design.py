@@ -168,3 +168,31 @@ class Ui_AddTaskWidget(QDialog):
         self.done_button.setText(QCoreApplication.translate("AddTaskWidget", u"Done", None))
         self.label.setText(QCoreApplication.translate("AddTaskWidget", u"Choice time", None))
     # retranslateUi
+
+
+class Ui_NotOriginalTaskDialog(QDialog):
+    def setupUi(self, NotOriginalTaskDialog):
+        if not NotOriginalTaskDialog.objectName():
+            NotOriginalTaskDialog.setObjectName(u"NotOriginalTaskDialog")
+        NotOriginalTaskDialog.resize(400, 213)
+        self.pushButton = QPushButton(NotOriginalTaskDialog)
+        self.pushButton.setObjectName(u"pushButton")
+        self.pushButton.setGeometry(QRect(280, 170, 101, 31))
+        self.label = QLabel(NotOriginalTaskDialog)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(20, 20, 361, 31))
+        self.label_2 = QLabel(NotOriginalTaskDialog)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setGeometry(QRect(20, 70, 351, 81))
+
+        self.retranslateUi(NotOriginalTaskDialog)
+
+        QMetaObject.connectSlotsByName(NotOriginalTaskDialog)
+    # setupUi
+
+    def retranslateUi(self, NotOriginalTaskDialog):
+        NotOriginalTaskDialog.setWindowTitle(QCoreApplication.translate("NotOriginalTaskDialog", u"Dialog", None))
+        self.pushButton.setText(QCoreApplication.translate("NotOriginalTaskDialog", u"OK", None))
+        self.label.setText(QCoreApplication.translate("NotOriginalTaskDialog", u"You are failed on creation of task. It seems that task is already exists.", None))
+        self.label_2.setText("")
+    # retranslateUi

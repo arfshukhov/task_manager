@@ -23,3 +23,7 @@ class TaskStatus(Model):
     class Meta:
         database = db
         db_table = "TaskStatus"
+
+
+db.connect()
+db.create_tables([Task, TaskStatus])
