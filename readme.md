@@ -13,4 +13,5 @@
 ![Архитектура проекта](https://github.com/arfshukhov/task_manager/blob/main/architecture.png?raw=true)
 
 * Чтобы запустить проект, нужно установить внешние пакеты. Сделать это можно, запустив скрипт "setup_requirements.py".
+* Минимальная версия Python, необходимая для запуска проекта - 3.11
 
