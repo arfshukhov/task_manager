@@ -26,18 +26,19 @@ from PySide6.QtWidgets import QApplication, QMainWindow
 class MainWindow(Ui_TaskManager):
     def __init__(self):
         super().__init__()
-        self.model_list = [QStandardItemModel() for _ in range(7)]
+
         self.setupUi(self)
         self.retranslateUi(self)
         self.week_list = [
             self.monday_list,
             self.tuesday_list,
-            self.monday_list,
+            self.wednesday_list,
             self.thursday_list,
             self.friday_list,
             self.saturday_list,
             self.sunday_list
         ]
+        self.model_list = [QStandardItemModel() for i in self.week_list]
         self.add_task_button.clicked.connect(self.show_add_task_dialog)
         self.set_model_for()
         self.fill_task_list()
@@ -52,7 +53,9 @@ class MainWindow(Ui_TaskManager):
             i.setEditTriggers(QAbstractItemView.NoEditTriggers)
 
     def set_model_for(self):
+        self.monday_list.setModel(self.model_list[0])
         for i in range(len(self.week_list)):
+            print(i)
             self.week_list[i].setModel(self.model_list[i])
 
     def show_add_task_dialog(self):
@@ -70,6 +73,7 @@ class MainWindow(Ui_TaskManager):
             self.week_list[i].clicked[QModelIndex].connect(trigger)
             for g in k:
                 s = "\n".join(textwrap.wrap(g.text, 22))
+                print(i, s)
                 self.model_list[i].appendRow(QStandardItem(f"{g.time}\n{s}"))
 
     def open_task(self, index, graph):

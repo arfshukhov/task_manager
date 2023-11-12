@@ -48,6 +48,7 @@ class WeekProcessor:
     @classmethod
     def get_week_tasks(cls) -> Week:
         days = cls.__get_week_days()
+        #print(cls.__get_week_days())
         tasks: Week = []
         for i in days:
             tasks_by_day = [task for task in DBReader.get_actual_task(i)]

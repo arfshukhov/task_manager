@@ -50,6 +50,7 @@ class Ui_TaskManager(QMainWindow):
 
         self.friday_list = QListView(self.horizontalLayoutWidget)
         self.friday_list.setObjectName(u"friday_list")
+        self.friday_list.setSelectionBehavior(QAbstractItemView.SelectItems)
 
         self.horizontalLayout.addWidget(self.friday_list)
 
@@ -60,6 +61,7 @@ class Ui_TaskManager(QMainWindow):
 
         self.sunday_list = QListView(self.horizontalLayoutWidget)
         self.sunday_list.setObjectName(u"sunday_list")
+        self.sunday_list.setSelectionBehavior(QAbstractItemView.SelectItems)
 
         self.horizontalLayout.addWidget(self.sunday_list)
 
@@ -132,6 +134,7 @@ class Ui_TaskManager(QMainWindow):
         self.sunday_label.setText(QCoreApplication.translate("TaskManager", u"SUNDAY", None))
         self.add_task_button.setText(QCoreApplication.translate("TaskManager", u"ADD TASK", None))
     # retranslateUi
+
 
 
 class Ui_AddTaskWidget(QDialog):
