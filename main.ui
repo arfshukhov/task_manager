@@ -25,25 +25,25 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QListWidget" name="monday_list"/>
+      <widget class="QListView" name="monday_list"/>
      </item>
      <item>
-      <widget class="QListWidget" name="tuesday_list"/>
+      <widget class="QListView" name="tuesday_list"/>
      </item>
      <item>
-      <widget class="QListWidget" name="wednesday_list"/>
+      <widget class="QListView" name="wednesday_list"/>
      </item>
      <item>
-      <widget class="QListWidget" name="thursday_list"/>
+      <widget class="QListView" name="thursday_list"/>
      </item>
      <item>
-      <widget class="QListWidget" name="friday_list"/>
+      <widget class="QListView" name="friday_list"/>
      </item>
      <item>
-      <widget class="QListWidget" name="saturday_list"/>
+      <widget class="QListView" name="saturday_list"/>
      </item>
      <item>
-      <widget class="QListWidget" name="sunday_list"/>
+      <widget class="QListView" name="sunday_list"/>
      </item>
     </layout>
    </widget>
@@ -108,7 +108,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="add_task_button">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -128,7 +128,7 @@
      <x>0</x>
      <y>0</y>
      <width>1086</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

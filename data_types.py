@@ -10,4 +10,4 @@ Text = NewType("Text", str)
 
 DBOperationResult = NewType("DBOperationResult", Union[bool, str])
 
-Week = NewType("Week", List[Task])
+Week = NewType("Week", List[List[Task]])

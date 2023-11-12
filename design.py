@@ -19,8 +19,8 @@ class Ui_TaskManager(QMainWindow):
     def setupUi(self, TaskManager):
         if not TaskManager.objectName():
             TaskManager.setObjectName(u"TaskManager")
-        self.resize(1086, 599)
-        self.centralwidget = QWidget()
+        TaskManager.resize(1086, 599)
+        self.centralwidget = QWidget(TaskManager)
         self.centralwidget.setObjectName(u"centralwidget")
         self.horizontalLayoutWidget = QWidget(self.centralwidget)
         self.horizontalLayoutWidget.setObjectName(u"horizontalLayoutWidget")
@@ -28,37 +28,37 @@ class Ui_TaskManager(QMainWindow):
         self.horizontalLayout = QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.monday_list = QListWidget(self.horizontalLayoutWidget)
+        self.monday_list = QListView(self.horizontalLayoutWidget)
         self.monday_list.setObjectName(u"monday_list")
 
         self.horizontalLayout.addWidget(self.monday_list)
 
-        self.tuesday_list = QListWidget(self.horizontalLayoutWidget)
+        self.tuesday_list = QListView(self.horizontalLayoutWidget)
         self.tuesday_list.setObjectName(u"tuesday_list")
 
         self.horizontalLayout.addWidget(self.tuesday_list)
 
-        self.wednesday_list = QListWidget(self.horizontalLayoutWidget)
+        self.wednesday_list = QListView(self.horizontalLayoutWidget)
         self.wednesday_list.setObjectName(u"wednesday_list")
 
         self.horizontalLayout.addWidget(self.wednesday_list)
 
-        self.thursday_list = QListWidget(self.horizontalLayoutWidget)
+        self.thursday_list = QListView(self.horizontalLayoutWidget)
         self.thursday_list.setObjectName(u"thursday_list")
 
         self.horizontalLayout.addWidget(self.thursday_list)
 
-        self.friday_list = QListWidget(self.horizontalLayoutWidget)
+        self.friday_list = QListView(self.horizontalLayoutWidget)
         self.friday_list.setObjectName(u"friday_list")
 
         self.horizontalLayout.addWidget(self.friday_list)
 
-        self.saturday_list = QListWidget(self.horizontalLayoutWidget)
+        self.saturday_list = QListView(self.horizontalLayoutWidget)
         self.saturday_list.setObjectName(u"saturday_list")
 
         self.horizontalLayout.addWidget(self.saturday_list)
 
-        self.sunday_list = QListWidget(self.horizontalLayoutWidget)
+        self.sunday_list = QListView(self.horizontalLayoutWidget)
         self.sunday_list.setObjectName(u"sunday_list")
 
         self.horizontalLayout.addWidget(self.sunday_list)
@@ -66,11 +66,9 @@ class Ui_TaskManager(QMainWindow):
         self.horizontalLayoutWidget_2 = QWidget(self.centralwidget)
         self.horizontalLayoutWidget_2.setObjectName(u"horizontalLayoutWidget_2")
         self.horizontalLayoutWidget_2.setGeometry(QRect(10, 49, 1061, 31))
-
         self.horizontalLayout_2 = QHBoxLayout(self.horizontalLayoutWidget_2)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
-
         self.monday_label = QLabel(self.horizontalLayoutWidget_2)
         self.monday_label.setObjectName(u"monday_label")
 
@@ -107,13 +105,12 @@ class Ui_TaskManager(QMainWindow):
         self.horizontalLayout_2.addWidget(self.sunday_label)
 
         self.add_task_button = QPushButton(self.centralwidget)
-        self.add_task_button.setObjectName(u"pushButton")
+        self.add_task_button.setObjectName(u"add_task_button")
         self.add_task_button.setGeometry(QRect(10, 10, 75, 23))
-
         TaskManager.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(TaskManager)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 1086, 21))
+        self.menubar.setGeometry(QRect(0, 0, 1086, 22))
         TaskManager.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(TaskManager)
         self.statusbar.setObjectName(u"statusbar")
@@ -134,7 +131,7 @@ class Ui_TaskManager(QMainWindow):
         self.saturday_label.setText(QCoreApplication.translate("TaskManager", u"SATURDAY", None))
         self.sunday_label.setText(QCoreApplication.translate("TaskManager", u"SUNDAY", None))
         self.add_task_button.setText(QCoreApplication.translate("TaskManager", u"ADD TASK", None))
-    # retranslateU
+    # retranslateUi
 
 
 class Ui_AddTaskWidget(QDialog):
@@ -193,6 +190,47 @@ class Ui_NotOriginalTaskDialog(QDialog):
     def retranslateUi(self, NotOriginalTaskDialog):
         NotOriginalTaskDialog.setWindowTitle(QCoreApplication.translate("NotOriginalTaskDialog", u"Dialog", None))
         self.pushButton.setText(QCoreApplication.translate("NotOriginalTaskDialog", u"OK", None))
-        self.label.setText(QCoreApplication.translate("NotOriginalTaskDialog", u"You are failed on creation of task. It seems that task is already exists.", None))
+        self.label.setText(QCoreApplication.translate("NotOriginalTaskDialog",
+                                u"You are failed on creation of task. It seems that task is already exists.", None))
         self.label_2.setText("")
+    # retranslateUi
+
+
+class Ui_CompleteTaskDialog(QDialog):
+    def setupUi(self, CompleteTaskDialog):
+        if not CompleteTaskDialog.objectName():
+            CompleteTaskDialog.setObjectName(u"CompleteTaskDialog")
+        CompleteTaskDialog.resize(385, 241)
+        self.time_l = QLabel(CompleteTaskDialog)
+        self.time_l.setObjectName(u"time_l")
+        self.time_l.setGeometry(QRect(20, 10, 341, 31))
+        self.label = QLabel(CompleteTaskDialog)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(110, 170, 131, 41))
+        self.text_l = QTextEdit(CompleteTaskDialog)
+        self.text_l.setObjectName(u"text_l")
+        self.text_l.setGeometry(QRect(30, 50, 331, 71))
+        self.text_l.setReadOnly(True)
+        self.status = QLabel(CompleteTaskDialog)
+        self.status.setObjectName(u"status")
+        self.status.setGeometry(QRect(40, 140, 49, 16))
+        self.complete = QPushButton(CompleteTaskDialog)
+        self.complete.setObjectName(u"complete")
+        self.complete.setGeometry(QRect(100, 210, 75, 24))
+        self.cancel = QPushButton(CompleteTaskDialog)
+        self.cancel.setObjectName(u"cancel")
+        self.cancel.setGeometry(QRect(180, 210, 75, 24))
+
+        self.retranslateUi(CompleteTaskDialog)
+
+        QMetaObject.connectSlotsByName(CompleteTaskDialog)
+    # setupUi
+
+    def retranslateUi(self, CompleteTaskDialog):
+        CompleteTaskDialog.setWindowTitle(QCoreApplication.translate("CompleteTaskDialog", u"Complete task", None))
+        self.time_l.setText("")
+        self.label.setText(QCoreApplication.translate("CompleteTaskDialog", u"\u0421omplete this task?", None))
+        self.status.setText("")
+        self.complete.setText(QCoreApplication.translate("CompleteTaskDialog", u"Complete", None))
+        self.cancel.setText(QCoreApplication.translate("CompleteTaskDialog", u"Cancel", None))
     # retranslateUi
